@@ -1,5 +1,6 @@
 <?php
-
+namespace App\Test\Other;
+use App\Shared;
 class TestSetState {
     private $value1_;
     private $value2_;

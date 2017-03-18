@@ -1,0 +1,17 @@
+<?php
+class Autoloader {
+    static public function loader($className) {
+        $className=str_replace("App","classes",$className);
+
+        $filename = "./" . str_replace('\\', '/', $className) . ".php";
+
+        if (file_exists($filename)) {
+            include_once($filename);
+            if (class_exists($className)) {
+                return TRUE;
+            }
+        }
+        return FALSE;
+    }
+}
+spl_autoload_register('Autoloader::loader');
