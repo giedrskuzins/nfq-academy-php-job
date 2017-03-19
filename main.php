@@ -10,6 +10,8 @@ use App\Animal;
 use App\Test\TestDebugInfo;
 use App\Test\Other\TestSetState;
 
+use Vendor\testClass\TestAutoload;
+
 
 echo "Testing script ...\n";
 
@@ -64,4 +66,7 @@ eval(var_export($testSetState, true) . ';');
 //__debuginfo
 $testDebugInfo = new TestDebugInfo();
 var_dump($testDebugInfo);
+
+//autoload
+$testAutoload=new TestAutoload();
 
